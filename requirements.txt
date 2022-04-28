@@ -1,0 +1,7 @@
+aiogram
+environs
+asyncio
+beautifulsoup4
+apscheduler
+aiohttp
+asyncpg
