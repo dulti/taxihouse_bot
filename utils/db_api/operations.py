@@ -7,7 +7,6 @@ from datetime import datetime
 from asyncpg import Record
 
 from utils.db_api.postgresql import Database
-from utils.textprocessing import plates_rus
 
 
 async def remove_watch_by_user_id(db: Database, id_: int, user_id: int, plate: str) -> None:

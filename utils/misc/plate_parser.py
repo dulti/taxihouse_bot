@@ -218,7 +218,7 @@ async def get_status(plates: list[str], db_records: dict[str: tuple] = None) -> 
         # otherwise compare all dates and return the tuple with the latest date
         try:
             relevant_statuses[plate] = max(plates_data[plate].values(), key=lambda x: x[1])
-        except TypeError:
+        except (TypeError, ValueError):
             print(plate)
             print(plates_data[plate])
             relevant_statuses[plate] = ('FAIL', None)

@@ -21,7 +21,7 @@ async def send_message_to_watchers(dp: Dispatcher, db: Database):
                                         record['plate']:
                                             (record['status'], record['status_date']) for record in all_plates
                                     }
-                                    )
+    )
 
     for plate_record in all_plates:
         plate = plate_record['plate']
@@ -34,6 +34,7 @@ async def send_message_to_watchers(dp: Dispatcher, db: Database):
             # log plate update
             await db.add_operation(created_at=datetime.now(), operation=f'updremplate|status:{new_status}',
                                    user_id=None, by_bot=True, plate=plate)
+
     # iterate through users
     all_users = await db.get_all_users()
     for user_record in all_users:

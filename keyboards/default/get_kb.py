@@ -8,8 +8,12 @@ from loader import db
 async def get_keyboard(user_id):
     if str(user_id) in config.ADMINS:
         keyboard = admin_kb
-    elif (await db.get_user_by_user_id(user_id))['is_elevated']:
-        keyboard = elevated_kb
     else:
-        keyboard = regular_kb
+        try:
+            if (await db.get_user_by_user_id(user_id))['is_elevated']:
+                keyboard = elevated_kb
+            else:
+                keyboard = regular_kb
+        except TypeError:
+            keyboard = regular_kb
     return keyboard

@@ -11,4 +11,4 @@ async def default_handler(message: Message):
     keyboard = await get_keyboard(user_id)
     msg_text = 'Выберите команду из меню. Например, чтобы добавить новый номер к отслеживанию, выберите ' \
                'команду "Добавить".'
-    await message.answer(msg_text)
+    await message.answer(msg_text, reply_markup=keyboard)
