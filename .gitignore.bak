@@ -1,7 +1,0 @@
-**/__pycache__
-**/.git
-**/.idea
-.env
-*.bak
-test.py
-todo.txt

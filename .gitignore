@@ -2,6 +2,7 @@
 **/.git
 **/.idea
 .env
-**/*.bak
+*.bak
 test.py
 todo.txt
+*.service
