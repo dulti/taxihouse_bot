@@ -14,3 +14,5 @@ Data parsing and notification Telegram bot.
 The bot is ran by running app.py.
 
 Specify values in .env before running (.env.dist given as example).
+
+Made with template by @Latand (https://github.com/Latand/aiogram-bot-template/tree/7c151a4077fa5bb33f9feaea454e60265d380995)
