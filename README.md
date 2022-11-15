@@ -12,4 +12,5 @@ Data parsing and notification Telegram bot.
 - user data and plates status data done in PostgreSQL
 
 The bot is ran by running app.py.
+
 Specify values in .env before running (.env.dist given as example).
